@@ -15,7 +15,7 @@
   --clr-med:#095598;
   --clr-dark: #153C4B;
   --clr-accent:#ABD4E5;
-  --clr-blend:#848484;
+  --clr-blend:#c5c7c9;
 
   --fs-h1: 3.5rem;
   --fs-h2: 2.25rem;
@@ -61,6 +61,31 @@ img {
 
 strong{
   font-weight: var(--fw-bold);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover{
+  transform: scale(1.5);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
 }
 
 /* Typography */
@@ -207,6 +232,7 @@ nav{display:none}
 
 .services{
   display: grid;
+  margin-top: -1.5em;
   margin-bottom: -4em;
 }
 .service{
@@ -215,6 +241,11 @@ nav{display:none}
   margin: 1em 0.5em 1em 0.5em;
   border-radius: 35px;
   box-shadow: var(--bs);
+  transition: transform 200ms ease-in-out;
+}
+
+.service:hover{
+  transform: scale(1.1);
 }
 
 .service--prog{
@@ -259,7 +290,7 @@ nav{display:none}
     text-align: left;
   }
 
-  .service{
+  .service + .service{
     max-width: 300px;
     min-height: 300px;
     grid-row: 2;
