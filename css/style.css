@@ -14,6 +14,7 @@
   --clr-light: #E8F4F9;
   --clr-dark: #153C4B;
   --clr-accent:#ABD4E5;
+  --clr-blend:#848484;
 
   --fs-h1: 3.5rem;
   --fs-h2: 2.25rem;
@@ -22,12 +23,15 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+  --bs2: 0.6em 0.6em 0.9em rgba(0,0,0,0.5),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
   :root{
     --fs-h1: 3.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 3.0rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -83,6 +87,8 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro strong{
   display: block;
+  margin-top:0.20em;
+  margin-left:0.4em;
 }
 
 .section__subtitle{
@@ -97,7 +103,9 @@ h3 { font-size: var(--fs-h3) }
   padding: .25em 1em;
   font-family: var(--ff-secondary);
   margin-bottom: 5em;
+  box-shadow: var(--bs);
 }
+
 
 /* header */
 
@@ -114,9 +122,10 @@ nav{display:none}
   opacity: 0.85;
   border-bottom: 5px solid var(--clr-accent);
   margin-bottom: -0.25em;
+  margin-top: -1em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 670px) {
   .intro{
     display: grid;
     width: min-content;
@@ -135,6 +144,10 @@ nav{display:none}
     z-index: 2;
   }
 
+  .section__title--intro{
+    margin-top: 0.8em;
+  }
+
   .section__subtitle--intro {
     align-self: start;
     grid-column: -1 / 1;
@@ -143,5 +156,108 @@ nav{display:none}
     position: relative;
     left: -1em;
     width: calc(100% + 1.5em);
+  }
+}
+
+/* My services section */
+.my-services {
+  background-color: var(--clr-accent);
+  color: var(--clr-accent);
+  text-align: center;
+  box-shadow: var(--bs);
+  margin-left: 2em;
+  margin-right: 3em;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.section__title--services{
+  color: var(--clr-dark);
+  position: relative;
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+.section__title--services::after {
+  content: '';
+  display: block;
+  width: 3em;
+  height: 3px;
+  margin: 0.25em auto 1em;
+  background: var(--clr-dark);
+  opacity: 0.5;
+}
+
+.service__title{
+  color: var(--clr-dark);
+}
+
+.services{
+  display: grid;
+  margin-bottom: -1.5em;
+}
+.service{
+  min-width: 100px;
+  min-height: 300px;
+  margin: 1em 0.5em 1em 0.5em;
+  border-radius: 35px;
+  box-shadow: var(--bs2);
+}
+
+.service--prog{
+  background-color: var(--clr-blend);
+  background-image: url(../img/night_heron.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.service--music{
+  background-color: var(--clr-blend);
+  background-image: url(../img/piano.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.service--photo{
+  background-color: var(--clr-blend);
+  background-image: url(../img/night_heron.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+@media (min-width: 800px) {
+  .service__title{
+    grid-row: 3;
+    text-align: center;
+  }
+
+  .service__title--prog{
+    grid-column: 1;
+  }
+
+  .service__title--music{
+    grid-column: 2;
+  }
+
+  .service__title--photo{
+    grid-column: 3;
+  }
+
+  .service{
+    max-width: 300px;
+    min-height: 300px;
+    grid-row: 2;
+  }
+
+  .service--prog{
+    grid-column: 1;
+  }
+
+  .service--music{
+    grid-column: 2;
+  }
+
+  .service--photo{
+    grid-column: 3;
   }
 }
