@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* Variables */
 :root{
   --ff-primary: 'Source Sans Pro', sans-serif;
   --ff-secondary: 'Source Code Pro', monospace;
@@ -26,6 +27,9 @@
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
 
   --bs2: 0.6em 0.6em 0.9em rgba(0,0,0,0.5),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
+  --bs3: 0.8em 0.8em 0.9em rgba(0,0,0,0.7),
         0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
@@ -88,7 +92,8 @@ strong{
   outline-offset: 3px;
 }
 
-/* Typography */
+
+/* General Typography */
 
 h1,
 h2,
@@ -138,6 +143,7 @@ h3 { font-size: var(--fs-h3) }
 nav{display:none}
 
 
+
 /* Intro section */
 
 .intro {
@@ -149,6 +155,27 @@ nav{display:none}
   border-bottom: 5px solid var(--clr-accent);
   margin-bottom: -0.25em;
   margin-top: -1em;
+}
+
+.image__arrow{
+  display: none;
+  max-width: 200px;
+  margin-top: -9em;
+  margin-bottom: 4em;
+  margin-left: 40%;
+  opacity: 0.3;
+  size: min_content;
+  border: 5px solid black;
+  border-radius: 100%;
+  background-color: var(--clr-accent);
+  box-shadow: var(--bs2);
+}
+
+.image__arrow:hover{
+  box-shadow: var(--bs3);
+  opacity: 0.6;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1.1);
 }
 
 @media (min-width: 670px) {
@@ -183,6 +210,10 @@ nav{display:none}
     left: -1em;
     width: calc(100% + 1.5em);
   }
+
+  .image__arrow{
+    display: block;
+  }
 }
 
 /* My services section */
@@ -193,6 +224,7 @@ nav{display:none}
   text-align: center;
   box-shadow: var(--bs);
   margin-left: 2em;
+  margin-top: 2em;
   margin-right: 3em;
   border-radius: 30px;
   align-items: center;
@@ -205,7 +237,7 @@ nav{display:none}
   font-size: var(--fs-h2);
   opacity: 0.7;
   position: relative;
-  margin-top: -1em;
+  margin-top: -1.7em;
   margin-bottom: 1em;
 }
 
@@ -306,5 +338,39 @@ nav{display:none}
 
   .service--photo{
     grid-column: 3;
+  }
+}
+
+.about-me{
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img{
+  max-width: 300px;
+}
+
+.about-me__body{
+  margin-top: -7em;
+}
+
+
+
+@media (min-width: 600){
+  .about-me{
+    display: grid;
+  }
+
+  .section__title--about,
+  .section__subtitle--about{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-me__img {
+    grid-column: 2;
+    grid-row: 1;
+
   }
 }
