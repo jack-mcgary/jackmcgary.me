@@ -12,6 +12,7 @@
   --fw-bold: 900;
 
   --clr-light: #E8F4F9;
+  --clr-med:#095598;
   --clr-dark: #153C4B;
   --clr-accent:#ABD4E5;
   --clr-blend:#848484;
@@ -161,8 +162,9 @@ nav{display:none}
 
 /* My services section */
 .my-services {
-  background-color: var(--clr-accent);
+  background-color: var(--clr-dark);
   color: var(--clr-accent);
+  opacity: 0.9;
   text-align: center;
   box-shadow: var(--bs);
   margin-left: 2em;
@@ -172,7 +174,11 @@ nav{display:none}
 }
 
 .section__title--services{
-  color: var(--clr-dark);
+  color: var(--clr-light);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-h2);
+  opacity: 0.7;
   position: relative;
   margin-top: -1em;
   margin-bottom: 1em;
@@ -182,31 +188,38 @@ nav{display:none}
   content: '';
   display: block;
   width: 3em;
-  height: 3px;
-  margin: 0.25em auto 1em;
-  background: var(--clr-dark);
+  height: 2px;
+  margin: 0.4em auto 1em;
+  background: var(--clr-light);
   opacity: 0.5;
 }
 
 .service__title{
   color: var(--clr-dark);
+  opacity:0.5;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+  background-color: var(--clr-light);
+  width: min-content;
+  padding: 0.25em 0.25em 0.25em 0.25em;
+  border-radius: 20%;
 }
 
 .services{
   display: grid;
-  margin-bottom: -1.5em;
+  margin-bottom: -4em;
 }
 .service{
   min-width: 100px;
   min-height: 300px;
   margin: 1em 0.5em 1em 0.5em;
   border-radius: 35px;
-  box-shadow: var(--bs2);
+  box-shadow: var(--bs);
 }
 
 .service--prog{
   background-color: var(--clr-blend);
-  background-image: url(../img/night_heron.jpg);
+  background-image: url(../img/prog.jpg);
   background-size: cover;
   background-blend-mode: multiply;
 }
@@ -233,14 +246,17 @@ nav{display:none}
 
   .service__title--prog{
     grid-column: 1;
+    text-align: left;
   }
 
   .service__title--music{
     grid-column: 2;
+    text-align: left;
   }
 
   .service__title--photo{
     grid-column: 3;
+    text-align: left;
   }
 
   .service{
