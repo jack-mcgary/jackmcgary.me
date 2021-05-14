@@ -191,7 +191,7 @@ header {
 }
 
 .nav__link:hover{
-  color: var(--clr-accent);
+  color: var(--clr-light);
 }
 
 .nav-toggle {
@@ -543,6 +543,15 @@ header {
   max-width: 1000px;
 }
 
+@media(max-width: 700px){
+  .my-description{
+    margin-top: -1em;
+  }
+
+  .my-programs{
+    padding-bottom: 25em;
+  }
+}
 
 
 
