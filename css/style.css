@@ -350,7 +350,7 @@ header {
   transition: transform 200ms ease-in-out;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0.6em;
+  margin-top: 1em;
   display: none;
 }
 
@@ -534,7 +534,7 @@ header {
   color: var(--clr-accent);
   box-shadow: var(--bs);
   margin-left: 2em;
-  margin-top: 19em;
+  margin-top: 10em;
   margin-right: 3em;
   border-radius: 30px;
 }
@@ -573,9 +573,6 @@ header {
   font-family: var(--ff-secondary);
   max-width: 1200px;
   margin-bottom: -1.5em;
-}
-
-@media(max-width: 700px){
 }
 
 
