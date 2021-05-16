@@ -1,8 +1,10 @@
 # jackmcgary.me
 
 # Overview
-This website project is part of my DALI application. The domain is publicly hosted by GitHub at jackmcgary.me (if you want to see it render). 
-Thank you so much for your consideration. My email is jackson.r.mcgary.23@dartmouth.edu. Email me if you need any clarification! 
+This website project is part of my DALI application. The domain is publicly hosted by GitHub at jackmcgary.me (if you want to see it render). Also, give it a few seconds to render (there are a lot of high quality images that might take a bit to load).
+
+
+Thank you so much for your consideration. My email is jackson.r.mcgary.23@dartmouth.edu. Email me if you need any clarification! Thanks again.
 
 
 # Description
