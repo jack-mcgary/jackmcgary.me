@@ -254,6 +254,7 @@ header {
 .hamburger::before {top: 10px}
 .hamburger::after {bottom: 10px}
 
+
 /* Intro section */
 
 .intro {
@@ -534,7 +535,7 @@ header {
   color: var(--clr-accent);
   box-shadow: var(--bs);
   margin-left: 2em;
-  margin-top: 10em;
+  margin-top: 5em;
   margin-right: 3em;
   border-radius: 30px;
 }
